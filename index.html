@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator with DOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center min-h-screen antialiased selection:bg-emerald-500/30">
+    <div class="bg-slate-900/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-slate-800 w-full max-w-[450px] transform transition-all">
+      <div class="flex justify-between items-center px-1 mb-4 text-sm text-slate-500 font-mono tracking-widest uppercase">
+          <span>CASIO-ish</span>
+          <div class="flex space-x-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500 block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500 block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 block"></span>
+          </div>
+      </div>
+
+      <div class="mb-6 relative">
+          <input 
+              type="text" 
+              id="display" 
+              class="w-full p-6 text-right text-5xl bg-slate-950 text-emerald-400 rounded-2xl font-mono outline-none shadow-inner border border-slate-850 tracking-wide select-none" 
+              placeholder="0" 
+              disabled
+          />
+          <div class="absolute inset-x-0 top-0 h-2 bg-white/5 rounded-t-2xl pointer-events-none"></div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4" id="buttons-container">
+          <button class="btn bg-rose-500/10 text-rose-400 p-5 rounded-xl text-2xl font-bold hover:bg-rose-500 hover:text-white active:scale-95 transition-all duration-100 shadow-sm" data-val="C">C</button>
+          <button class="btn bg-slate-800 text-slate-400 p-5 rounded-xl text-2xl font-bold hover:bg-slate-700 hover:text-white active:scale-95 transition-all duration-100 shadow-sm" data-val="DEL">⌫</button>
+          <button class="btn bg-amber-500/10 text-amber-500 p-5 rounded-xl text-2xl font-bold hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition-all duration-100 shadow-sm" data-val="/">÷</button>
+          <button class="btn bg-amber-500/10 text-amber-500 p-5 rounded-xl text-2xl font-bold hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition-all duration-100 shadow-sm" data-val="*">×</button>
+          
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="7">7</button>
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="8">8</button>
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="9">9</button>
+          <button class="btn bg-amber-500/10 text-amber-500 p-5 rounded-xl text-2xl font-bold hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition-all duration-100 shadow-sm" data-val="-">-</button>
+          
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="4">4</button>
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="5">5</button>
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="6">6</button>
+          <button class="btn bg-amber-500/10 text-amber-500 p-5 rounded-xl text-2xl font-bold hover:bg-amber-500 hover:text-slate-950 active:scale-95 transition-all duration-100 shadow-sm" data-val="+">+</button>
+          
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="1">1</button>
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="2">2</button>
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val="3">3</button>
+          <button class="btn bg-emerald-500 text-slate-950 p-5 rounded-xl text-3xl font-bold hover:bg-emerald-400 active:scale-95 transition-all duration-100 shadow-lg shadow-emerald-500/20 row-span-2 flex items-center justify-center" data-val="=">=</button>
+          
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm col-span-2" data-val="0">0</button>
+          <button class="btn bg-slate-800/60 text-slate-200 p-5 rounded-xl text-2xl font-semibold hover:bg-slate-700 active:scale-95 transition-all duration-100 shadow-sm" data-val=".">.</button>
+      </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
