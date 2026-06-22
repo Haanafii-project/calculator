@@ -2,6 +2,8 @@
 
 Kalkulator digital berbasis web dengan tampilan modern bergaya *glassmorphism*. Proyek ini dibuat untuk memenuhi tantangan (challenge) pembuatan kalkulator menggunakan interaksi DOM (Document Object Model) secara manual tanpa bantuan *framework* JavaScript.
 
+Visit : https://haanafii-project.github.io/calculator/
+
 ---
 
 ## 🚀 Fitur Utama
